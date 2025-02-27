@@ -22,7 +22,6 @@ public class T2 extends Thread {
         ML = Data.getMatrix("ML", n, inputType, 2);
 
         int q = Data.F2(MH, MK, ML);
-        // System.out.println("q = " + q);
 
         if (n < 1000) {
             System.out.println("q = " + q);

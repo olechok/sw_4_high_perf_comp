@@ -1,14 +1,9 @@
 package com.olechok.lab1;
 
-
-// d = MAX(B + C) + MIN(A + B*(MA*ME))
-// q = MAX(MH * MK - ML)
-// s = MAX(V*MO + P*(MT*MS) + R)
 import java.io.*;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Data {
     private static final Scanner scanner = new Scanner(System.in);
@@ -60,7 +55,7 @@ public class Data {
             }
         } catch (IOException | NumberFormatException e) {
             System.out.println("Помилка введення: " + e.getMessage());
-            return getVectorFromConsole(vectorName, n); // Повторний запит у разі помилки
+            return getVectorFromConsole(vectorName, n);
         }
 
         return vector;
@@ -83,20 +78,18 @@ public class Data {
         Random rand = new Random();
         int[] vector = new int[N];
         for (int i = 0; i < N; i++) {
-            //vector[i] = rand.nextInt(100);
-            vector[i] = ThreadLocalRandom.current().nextInt(100);
+            vector[i] = rand.nextInt(100);
         }
         return vector;
     }
 
     // Генерація випадкової матриці
     static int[][] generateRandomMatrix(int N) {
-        // Random rand = new Random();
+        Random rand = new Random();
         int[][] matrix = new int[N][N];
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                // matrix[i][j] = rand.nextInt(100);
-                matrix[i][j] = ThreadLocalRandom.current().nextInt(100);
+                matrix[i][j] = rand.nextInt(100);
             }
         }
         return matrix;
@@ -182,7 +175,7 @@ public class Data {
     public static void writeNumberToFile(int number, String filename) {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filename))) {
             writer.write(Integer.toString(number));
-            writer.newLine(); // Додаємо перехід на новий рядок
+            writer.newLine();
             System.out.println("Число " + number + " записано у файл " + filename);
         } catch (IOException e) {
             System.err.println("Помилка запису у файл: " + e.getMessage());
@@ -199,7 +192,7 @@ public class Data {
         return Arrays.stream(vector).min().orElse(0);
     }
 
-    // Знаходження максимального значення в матриці
+    // Максимальне значення в матриці
     static int max(int[][] matrix) {
         return Arrays.stream(matrix)
                 .flatMapToInt(Arrays::stream)

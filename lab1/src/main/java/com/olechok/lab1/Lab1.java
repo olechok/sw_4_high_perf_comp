@@ -1,8 +1,16 @@
 package com.olechok.lab1;
 
-// d = MAX(B + C) + MIN(A + B*(MA*ME))
-// q = MAX(MH * MK - ML)
-// s = MAX(V*MO + P*(MT*MS) + R)
+/**
+ * Програмне забезпечення високопродуктивних комп'ютерних систем
+ * Лабораторна робота ЛР1.3
+ * Потоки в мові Java
+ *  d = MAX(B + C) + MIN(A + B*(MA*ME))
+ *  q = MAX(MH * MK - ML)
+ *  s = MAX(V*MO + P*(MT*MS) + R)
+ * Міщук Ольга Володимирівна
+ * Група ІМ-22
+ * Дата 27.02.2025
+ */
 
 public class Lab1 {
     public static void main(String[] args) {

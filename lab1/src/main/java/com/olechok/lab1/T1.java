@@ -25,7 +25,6 @@ public class T1 extends Thread {
         ME = Data.getMatrix("ME", n, inputType, 1);
 
         int d = Data.F1(B, C, A, MA, ME);
-        // System.out.println("d = " + d);
 
         if (n < 1000) {
             System.out.println("d = " + d);

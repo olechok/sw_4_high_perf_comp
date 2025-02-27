@@ -27,7 +27,6 @@ public class T3 extends Thread {
         R = Data.getVector("R", n, inputType, 3);
 
         int s = Data.F3(V, MO, P, MT, MS,R);
-        // System.out.println("s = " + s);
 
         if (n < 1000) {
             System.out.println("s = " + s);
