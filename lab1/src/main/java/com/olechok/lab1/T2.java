@@ -2,8 +2,8 @@ package com.olechok.lab1;
 
 // q = MAX(MH * MK - ML)
 public class T2 extends Thread {
-    private int n;
-    private int inputType;
+    private final int n;
+    private final int inputType;
 
     private int[][] MH, MK, ML;
 

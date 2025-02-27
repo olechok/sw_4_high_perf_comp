@@ -3,8 +3,8 @@ package com.olechok.lab1;
 // d = MAX(B + C) + MIN(A + B*(MA*ME))
 
 public class T1 extends Thread {
-    private int n;
-    private int inputType;
+    private final int n;
+    private final int inputType;
     private int[] A, B, C;
     private int[][] MA, ME;
 

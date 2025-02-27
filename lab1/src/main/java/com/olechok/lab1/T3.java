@@ -3,8 +3,8 @@ package com.olechok.lab1;
 // s = MAX(V*MO + P*(MT*MS) + R)
 
 public class T3 extends Thread {
-    private int n;
-    private int inputType;
+    private final int n;
+    private final int inputType;
 
     private int[] V, P, R;
     private int[][] MO, MT, MS;
